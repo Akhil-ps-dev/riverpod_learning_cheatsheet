@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'riverpod.dart';
+import '../riverpod_provider/riverpod.dart';
 
 class RiverpodEasyLevel extends ConsumerWidget {
   const RiverpodEasyLevel({super.key});
