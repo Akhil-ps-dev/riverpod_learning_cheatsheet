@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_riverpod_learning/riverpod_levels/riverpod.dart';
+import 'package:flutter_riverpod_learning/riverpod_provider/riverpod.dart';
 
 class RiverpodHardLevel extends ConsumerWidget {
   const RiverpodHardLevel({super.key});

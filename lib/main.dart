@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'riverpod_levels/easy_level.dart';
+import 'presentation/easy_level.dart';
+import 'presentation/home.dart';
 
 void main() {
   runApp(
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(),
-      home: const RiverpodEasyLevel(),
+      home: const HomeScreen(),
     );
   }
 }

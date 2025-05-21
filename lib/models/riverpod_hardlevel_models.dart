@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class RiverpodModel extends ChangeNotifier {
+class RiverpodHardLevelModel extends ChangeNotifier {
   int counter = 0;
-  RiverpodModel({required this.counter});
+  RiverpodHardLevelModel({required this.counter});
 
   void incremntNumber() {
     counter++;
@@ -10,7 +10,8 @@ class RiverpodModel extends ChangeNotifier {
   }
 
   void decrementNumber() {
-    counter++;
+    counter--;
+
     notifyListeners();
   }
 }
