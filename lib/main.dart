@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'presentation/easy_level.dart';
 import 'presentation/home.dart';
 
 void main() {

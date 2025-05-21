@@ -10,3 +10,4 @@ final riverpodHardlevel = ChangeNotifierProvider<RiverpodHardLevelModel>(
     return RiverpodHardLevelModel(counter: 0);
   },
 );
+
