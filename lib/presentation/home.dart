@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod_learning/presentation/search_query.dart';
 
 import 'easy_level.dart';
 import 'hard_level.dart';
@@ -56,6 +57,14 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: Text('Riverpod MultiState slider Provider')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SearchQuery()),
+                );
+              },
+              child: Text('Riverpod Search ')),
         ],
       )),
     );
