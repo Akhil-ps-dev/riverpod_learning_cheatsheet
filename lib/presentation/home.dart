@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'easy_level.dart';
 import 'hard_level.dart';
+import 'multi_state_slider.dart';
 import 'riverpod_future_provider_get_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -46,6 +47,15 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: Text('Riverpod FutureProvider ,Get method')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const MultiStateSlider()),
+                );
+              },
+              child: Text('Riverpod MultiState slider Provider')),
         ],
       )),
     );
