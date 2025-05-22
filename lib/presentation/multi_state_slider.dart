@@ -15,19 +15,23 @@ class MultiStateSlider extends ConsumerWidget {
             InkWell(
               child: Consumer(
                 builder: (context, ref, child) {
-                  final slider = ref.watch(multistateProvider);
+                  final slider = ref.watch(multistateProvider.select(
+                    (value) => value.showPassword,
+                  ));
                   return InkWell(
                     onTap: () {
+                      print('build eye');
+
                       ref.read(multistateProvider.notifier).state = ref
                           .read(multistateProvider.notifier)
                           .state
-                          .copyWith(showPassowrd: !slider.showPassword);
+                          .copyWith(showPassowrd: !slider);
                     },
                     child: Container(
                       height: 200,
                       width: 200,
                       color: Colors.amber,
-                      child: slider.showPassword
+                      child: slider
                           ? Icon(Icons.visibility)
                           : Icon(Icons.visibility_off),
                     ),
@@ -37,7 +41,11 @@ class MultiStateSlider extends ConsumerWidget {
             ),
             Consumer(
               builder: (context, ref, child) {
-                final slider = ref.watch(multistateProvider).slider;
+                print('build slider');
+
+                final slider = ref.watch(multistateProvider.select(
+                  (value) => value.slider,
+                ));
                 return Container(
                   height: 200,
                   width: 200,

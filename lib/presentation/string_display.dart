@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_riverpod_learning/riverpod_provider/riverpod.dart';
 import 'package:flutter_riverpod_learning/riverpod_provider/riverpod_string_provider.dart';
 
 class RiverpodStringDisaply extends ConsumerWidget {
