@@ -27,7 +27,7 @@ class SearchState {
   });
 
   SearchState copyWith({
-    String? search,
+    String? search,  
     bool? isChange,
   }) {
     return SearchState(

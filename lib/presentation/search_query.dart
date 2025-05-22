@@ -18,16 +18,20 @@ class SearchQuery extends ConsumerWidget {
           ),
           Consumer(
             builder: (context, ref, child) {
-              final searchQuery = ref.watch(searchProvider);
+              final searchQuery = ref.watch(searchProvider.select(
+                (value) => value.search,
+              ));
 
-              return Text(searchQuery.search);
+              return Text(searchQuery);
             },
           ),
           Consumer(
             builder: (context, ref, child) {
-              final searchQuery = ref.watch(searchProvider);
+              final searchQuery = ref.watch(searchProvider.select(
+                (value) => value.isChange,
+              ));
               return Switch(
-                  value: searchQuery.isChange,
+                  value: searchQuery,
                   onChanged: (value) {
                     ref.read(searchProvider.notifier).onChange(value);
                   });
