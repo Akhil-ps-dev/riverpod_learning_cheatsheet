@@ -6,6 +6,8 @@ final searchProvider = StateNotifierProvider<SearchNotifier, SearchState>(
   },
 );
 
+
+
 class SearchNotifier extends StateNotifier<SearchState> {
   SearchNotifier() : super(SearchState(search: '', isChange: false));
 
