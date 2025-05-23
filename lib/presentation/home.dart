@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod_learning/presentation/search_query.dart';
 
+import '../Todo_app/presentation/todo_home.dart';
 import 'easy_level.dart';
 import 'hard_level.dart';
 import 'multi_state_slider.dart';
@@ -65,6 +66,14 @@ class HomeScreen extends StatelessWidget {
                 );
               },
               child: Text('Riverpod Search ')),
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const TodoHome()),
+                );
+              },
+              child: Text('Riverpod Todo ')),
         ],
       )),
     );
